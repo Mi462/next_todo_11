@@ -93,10 +93,12 @@ const Top = () => {
 
   //Deleteボタン押下時に動く関数
   const DeleteTodo = async (Id) => {
-    //firebaseの中のデータを削除する（バック側）
-    await deleteDoc(doc(db, "posts", Id));
-    //表示するための処理（フロント側）
-    todoDataFromFirebase();
+    if (confirm("Todoリストを削除します。よろしいですか？")) {
+      //firebaseの中のデータを削除する（バック側）
+      await deleteDoc(doc(db, "posts", Id));
+      //表示するための処理（フロント側）
+      todoDataFromFirebase();
+    }
   };
 
   //Priority選択時に動く関数
@@ -193,18 +195,6 @@ const Top = () => {
         <HStack mb={4}>
           {/* 検索部分 */}
           <HStack spacing={2}>
-            {/* SEARCH部分 */}
-            <FormControl>
-              <FormLabel>SEARCH</FormLabel>
-              <InputGroup size="sm">
-                <InputRightElement>
-                  <IconButton icon={<SearchIcon />} size="sm" />
-                </InputRightElement>
-                <Input placeholder="タスクを検索" />
-              </InputGroup>
-            </FormControl>
-            {/* SEARCH部分 */}
-
             {/* STATUS部分 */}
             <FormControl>
               <FormLabel>STATUS</FormLabel>
@@ -303,7 +293,7 @@ const Top = () => {
                           <Button
                             p={2}
                             width={100}
-                            fontSize={4}
+                            fontSize={12}
                             bgColor="green.50"
                             rounded="full"
                             textAlign="center"
@@ -316,7 +306,7 @@ const Top = () => {
                           <Button
                             p={2}
                             width={100}
-                            fontSize={4}
+                            fontSize={12}
                             bgColor="green.200"
                             rounded="full"
                             textAlign="center"
@@ -329,7 +319,7 @@ const Top = () => {
                           <Button
                             p={2}
                             width={100}
-                            fontSize={4}
+                            fontSize={12}
                             bgColor="green.500"
                             rounded="full"
                             textAlign="center"

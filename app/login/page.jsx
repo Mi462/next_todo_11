@@ -72,8 +72,13 @@ const Login = () => {
               autoComplete="password"
               bg={"green.50"}
             />
+            <Text fontWeight="bold" mb={2} mt={6}>
+              デモユーザー
+            </Text>
+            <Text mb={2}>email: test@gmail.com</Text>
+            <Text mb={2}>password: 123456</Text>
           </Box>
-          <Box mt={"24px"} textAlign={"center"}>
+          <Box mt={"20px"} textAlign={"center"}>
             <Button
               type="submit"
               bg={"green.600"}
