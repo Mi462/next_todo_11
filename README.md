@@ -11,7 +11,7 @@ Todo リストの作成を通じて、React.js、Next.js の基礎、Git,github 
 チームメンバー同士でのコードレビュー、毎週 MTG での issue ついての議論など個人開発では行えない内容をカバーしていきます。
 
 ## URL
-  ブラウザで[next-todo-11-mi462.vercel.app](https://next-todo-11-jie3yepxu-mi462.vercel.app/login)を開くと表示されます。
+  ブラウザで https://next-todo-11-mi462.vercel.app を開くと表示されます。
 
 ## デモ画像
 - Login画面
